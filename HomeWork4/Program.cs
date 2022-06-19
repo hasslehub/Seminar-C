@@ -177,10 +177,10 @@ void Polyndrom(int[] arrtest)
 Console.WriteLine();
 Console.WriteLine("Задача 2");
 Console.Write("Введите кол-во единиц в массиве: ");
-d = Convert.ToInt32(Console.ReadLine());
+int e = Convert.ToInt32(Console.ReadLine());
 Random rand1 = new Random();
-Console.WriteLine($"Размер массива -> {d*d}");
-int[] array2 = new int[d*d];
+Console.WriteLine($"Размер массива -> {e*e}");
+int[] array2 = new int[e*e];
 void SetArray2(int[] arr)
 {
     int len = arr.Length;
