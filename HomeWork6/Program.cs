@@ -166,50 +166,36 @@ int DecToBin(int decValue)
 На вход подаётся поговорка “без труда не выловишь и рыбку из пруда”. 
 Используя рекурсию, подсчитайте, сколько в поговорке гласных букв.
 */
-// НЕ ПОЛУЧИЛОСЬ
 Console.WriteLine();
 Console.WriteLine("Задача 2*");
-string text = "без труда не выловишь и рыбку из пруда";//string.Empty;
-//text = "без труда не выловишь и рыбку из пруда";
-char[] letters = new char[] { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'};
- // 'А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я' };
-Console.WriteLine();
+string note = "без труда не выловишь и рыбку из пруда ";
+char[] letters = { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я' };
 int count = 0;
-//Search(text, letters);
+Search(note, letters, 0, 0);
 
-/*  
-for (int i = 0; i < text.Length; i++)
+void Search(string text, char[] alphabet, int i, int j)
 {
-    for (int j = 0; j < glasnie.Length; j++)
+
+    if (i < text.Length - 1)
     {
-        if (glasnie[j] == text[i]) { count++; }
+        if (j < alphabet.Length - 1)
+        {
+            if (text[i] == alphabet[j])
+            {
+                count++;
+                Console.WriteLine($"i {i} -> {text[i]}    j {j} -> {alphabet[j]}");
+            }
+
+            Search(note, letters, i, j + 1);
+        }
+
+        else Search(note, letters, i + 1, 0);
+
     }
+
+
 }
-Console.WriteLine(count);
-*/
-/*
-int Search(string currentAray, char[] alphabet, int i, int j)
-{
-    count = 0;
-    if (i >= currentAray.Length
-         j >= alphabet.Length)
-        return 0;
-
-    if (currentAray[i] == alphabet[j])
-    {
-        count++;
-        Console.WriteLine($"{count}");
-    }
-    //
-    Search(text, glasnie, i + 1, j);
-    Search(text, glasnie, i, j + 1);
-
-    Console.WriteLine($"{count} {currentAray[i]}  {alphabet[j]}");
-    return count;
-    //
-}
-
-
+Console.WriteLine($"count->{count}");
 
 
 /*
