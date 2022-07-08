@@ -5,7 +5,7 @@
 кратные 3-ём в промежутке от M до N.
 M = 1; N = 9. -> "3, 6, 9"  M = 13; N = 20. -> "15, 18"
 */
-/*
+
 Console.WriteLine();
 Console.WriteLine("Задача 64");
 Console.WriteLine("Введите числовой промежуток ...");
@@ -33,7 +33,7 @@ void Recursion64(int M, int N)
 M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30
 */
-/*
+
 Console.WriteLine();
 Console.WriteLine("Задача 66");
 Console.WriteLine("Введите числовой промежуток ...");
@@ -69,7 +69,7 @@ A(0,2) = 3;  A(1,2) = 4; A(2,2) = 7; A(3,2) = 29;
 A(0,3) = 4;  A(1,3) = 5; A(2,3) = 9; A(3,3) = 61;
 A(0,4) = 5;  A(1,4) = 6; A(2,4) = 11; A(3,4) = 125;
 
-*//*
+*/
 Console.WriteLine();
 Console.WriteLine("Задача 68");
 Console.WriteLine("Функция Аккермана A(m,n)");
@@ -97,7 +97,7 @@ int Ack(int m, int n)
 подсчитывающий количество слов в данном предложении. 
 Словом считается последовательность символов без пробелов.
 */
-/*
+
 Console.WriteLine();
 Console.WriteLine("Задача 1*");
 
@@ -162,7 +162,6 @@ void FindPin(char[] alphabet, char[] word, int length = 0)
         {
           Console.WriteLine($" Случайная комбинация пароля: {countPin} -> {new String(word)}");  
         }
-        
         return;
     }
 
@@ -171,7 +170,6 @@ void FindPin(char[] alphabet, char[] word, int length = 0)
         word[length] = alphabet[i];
         FindPin(alphabet, word, length + 1);
     }
-    //
 }
 Console.WriteLine($" Всего комбинаций паролей: {countPin}");
 
