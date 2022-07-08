@@ -1,4 +1,5 @@
-﻿void FillRandomArrayDouble(double[,] currentArray)
+﻿/*
+void FillRandomArrayDouble(double[,] currentArray)
 {
     Random rand = new Random();
     for (int i = 0; i < currentArray.GetLength(0); i++)
@@ -9,7 +10,9 @@
         }
     }
 }
+*/
 
+/*
 void PrintArrayDouble(double[,] currentArray)
 {
     for (int i = 0; i < currentArray.GetLength(0); i++)
@@ -21,9 +24,9 @@ void PrintArrayDouble(double[,] currentArray)
         Console.WriteLine();
     }
 }
+*/
 
-
-
+/*
 void FillArrayInt(int[,] currentArray)
 {
     int num = 1;
@@ -35,6 +38,7 @@ void FillArrayInt(int[,] currentArray)
         }
     }
 }
+*/
 
 void FillRandomArrayInt(int[,] currentArray, int min, int max)
 {
@@ -213,13 +217,13 @@ void FillCircleArrayInt(int[,] currentArray)
 
     for (j = 1; j < currentArray.GetLength(0) - 1; j++)
     {
-        currentArray[i + 1 , j] = num;
+        currentArray[i + 1, j] = num;
         num++;
     }
 
-    for (j = j - 1; j > 0 ; j--)
+    for (j = j - 1; j > 0; j--)
     {
-        currentArray[i + 2 , j] = num;
+        currentArray[i + 2, j] = num;
         num++;
     }
 
@@ -227,45 +231,11 @@ void FillCircleArrayInt(int[,] currentArray)
 }
 
 Zadacha58();
+
+
 /*
-int n = 4;
-int[,] sqareMatrix = new int[n, n];
-
-int temp = 1;
-int i = 0;
-int j = 0;
-/*
-while (temp <= sqareMatrix.GetLength(0) * sqareMatrix.GetLength(1))
-{
-    sqareMatrix[i, j] = temp;
-    temp++;
-    if (i <= j + 1 && i + j < sqareMatrix.GetLength(1) - 1)
-        j++;
-
-    else if (i < j && i + j >= sqareMatrix.GetLength(0) - 1)
-        i++;
-
-    else if (i >= j && i + j > sqareMatrix.GetLength(1) - 1)
-        j--;
-
-    else
-        i--;
-}
-
-WriteArray(sqareMatrix);
-
-void WriteArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j] / 10 <= 0)
-                Console.Write($" {array[i, j]} ");
-
-            else Console.Write($"{array[i, j]} ");
-        }
-        Console.WriteLine();
-    }
-}
+Задача 2. 
+Дан двумерный массив, заполненный случайными числами от -9 до 9. 
+Подсчитать частоту вхождения каждого числа в массив, используя словарь.
 */
+
